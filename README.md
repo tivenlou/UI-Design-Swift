@@ -23,8 +23,8 @@ Menu:
 ### anchorInCenter :
 
 ```swift 
-View01.anchorInCenter(originView: UIView, width: size , height: size , autoscall: Bool )
-view02.anchorInCenterFill(View01, gap: 5)
+orangeColorView.anchorInCenter(originView: UIView, width: size , height: size , autoscall: Bool )
+redColorview0.anchorInCenterFill(View01, gap: 5)
 ```
 ![Center](Screenshots/Center.png)
 ![Center](Screenshots/Center_2.png)
