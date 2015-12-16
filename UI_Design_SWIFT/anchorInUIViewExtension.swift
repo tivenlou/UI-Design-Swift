@@ -335,44 +335,35 @@ extension UIView {
             print("error anchorAlignAndFillHeight edgeType not exist!")
         }
 
-        
-        
-        
-        
     }
     
     //MARK: - anchorAlign
     func anchorAlign(originView:UIView, relativeTo: UIView, edgeType: anchorType, gap: CGFloat, var width:CGFloat, var height:CGFloat, autoscall:Bool? = nil) {
         
+        //set self view size
+        self.frame.size = CGSize(width: width, height: height)
+        
+        //autoscall view size base on iPhone 5
+        if autoscall == true {
+            autoScallViewSize.base_on_iPhone5(self)
+            width = self.frame.width
+            height = self.frame.height
+        }
+        
         switch edgeType {
             
         case .AboveMatchingLeft :
             print("anchorAlign AboveMatchingLeft")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+            
             //set location
             let origiView_MinY = CGRectGetMinY(relativeTo.frame)
             let origiView_MinX = CGRectGetMinX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MinX, origiView_MinY-gap-height, width, height)
-                originView.addSubview(self)
-                
+            
         case .AboveCentered :
             print("anchorAlign AboveCentered")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MinY = CGRectGetMinY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
@@ -380,52 +371,28 @@ extension UIView {
             let center_point_X = origiView_MaxX-(relativeTo.frame.width/2)
             //reloacation view
             self.frame = CGRectMake(center_point_X-width/2, origiView_MinY-gap-height, width, height)
-                originView.addSubview(self)
-                
+            
         case .AboveMatchingRight :
             print("anchorAlign AboveMatchingRight")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MinY = CGRectGetMinY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MaxX-width, origiView_MinY-gap-height, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheRightMatchingTop :
             print("anchorAlign ToTheRightMatchingTop")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MinY = CGRectGetMinY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MaxX+gap, origiView_MinY, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheRightCentered :
             print("anchorAlign ToTheRightCentered")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
@@ -433,52 +400,28 @@ extension UIView {
             let center_point_Y = origiView_MaxY-(relativeTo.frame.height/2)
             //reloacation view
             self.frame = CGRectMake(origiView_MaxX+gap, center_point_Y-height/2, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheRightMatchingBottom :
             print("anchorAlign ToTheRightMatchingBottom")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MaxX+gap, origiView_MaxY-height, width, height)
-                originView.addSubview(self)
-                
+            
         case .UnderMatchingRight :
             print("anchorAlign UnderMatchingRight")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MaxX-width, origiView_MaxY+gap, width, height)
-                originView.addSubview(self)
-                
+            
         case .UnderCentered :
             print("anchorAlign UnderCentered")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MaxX = CGRectGetMaxX(relativeTo.frame)
@@ -486,52 +429,28 @@ extension UIView {
             let center_point_X = origiView_MaxX-(relativeTo.frame.width/2)
             //reloacation view
             self.frame = CGRectMake(center_point_X-width/2, origiView_MaxY+gap, width, height)
-                originView.addSubview(self)
-                
+            
         case .UnderMatchingLeft :
             print("anchorAlign UnderMatchingLeft")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MinX = CGRectGetMinX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MinX, origiView_MaxY+gap, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheLeftMatchingBottom :
             print("anchorAlign ToTheLeftMatchingBottom")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MinX = CGRectGetMinX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MinX-gap-width, origiView_MaxY-height, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheLeftCentered :
             print("anchorAlign ToTheLeftMatchingBottom")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MaxY = CGRectGetMaxY(relativeTo.frame)
             let origiView_MinX = CGRectGetMinX(relativeTo.frame)
@@ -539,99 +458,58 @@ extension UIView {
             let center_point_Y = origiView_MaxY-(relativeTo.frame.height/2)
             //reloacation view
             self.frame = CGRectMake(origiView_MinX-gap-width, center_point_Y-height/2, width, height)
-                originView.addSubview(self)
-                
+            
         case .ToTheLeftMatchingTop :
             print("anchorAlign ToTheLeftMatchingTop")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
+
             //set location
             let origiView_MinY = CGRectGetMinY(relativeTo.frame)
             let origiView_MinX = CGRectGetMinX(relativeTo.frame)
             //reloacation view
             self.frame = CGRectMake(origiView_MinX-gap-width, origiView_MinY, width, height)
-                originView.addSubview(self)
-                
             
         default :
             print("error anchorType not exist!")
             return
         }
         
+        originView.addSubview(self)
+
         
     }
     
     //MARK: - anchorInCorner
     func anchorInCorner(originView:UIView, edgeType: anchorType, gap_x: CGFloat, gap_y:CGFloat, var width:CGFloat, var height:CGFloat, autoscall:Bool? = nil) {
         
+        //set self view size
+        self.frame.size = CGSize(width: width, height: height)
+        //autoscall view size base on iPhone 5
+        if autoscall == true {
+            autoScallViewSize.base_on_iPhone5(self)
+            width = self.frame.width
+            height = self.frame.height
+        }
+        
         switch edgeType {
             
         case .TopLeft :
             print("anchorInCorner TopLeft")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
             self.frame = CGRectMake(gap_x, gap_y, width, height)
-            
-                originView.addSubview(self)
-                
         case .TopRight :
             print("anchorInCorner TopRight")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
-            //get origin view bound
             self.frame = CGRectMake(originView.frame.width-gap_x-width, gap_y, width, height)
-                originView.addSubview(self)
-                
         case .BottomLeft :
             print("anchorInCorner BottomLeft")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
             self.frame = CGRectMake(gap_x, originView.frame.height-gap_y-height, width, height)
-            
-                originView.addSubview(self)
-                
         case .BottomRight :
             print("anchorInCorner BottomRight")
-            //set self view size
-            self.frame.size = CGSize(width: width, height: height)
-            //autoscall view size base on iPhone 5
-            if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                width = self.frame.width
-                height = self.frame.height
-            }
             self.frame = CGRectMake( originView.frame.width-gap_x-width, originView.frame.height-gap_y-height, width, height)
-            
-                originView.addSubview(self)
-                
         default :
             print("error anchorType not exist!")
             return
         }
+        
+        originView.addSubview(self)
     }
     
     //MARK: - anchorFillingAndEdge
@@ -640,12 +518,12 @@ extension UIView {
         switch edgeType {
             
         case .Top :
-            print("anchorFillingAndEdge TopLeft")
+            print("anchorFillingAndEdge Top")
             //set self view size
             self.frame.size = CGSize(width: originView.frame.width-gap_x*2, height: othersize )
             //autoscall view size base on iPhone 5
             if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
+                autoScallViewSize.base_on_iPhone5(self, width_resize_only: false , height_resize_only: true )
                 othersize = self.frame.height
             }
             self.frame = CGRectMake(gap_x, gap_y, originView.frame.width-gap_x*2, othersize)
@@ -657,7 +535,7 @@ extension UIView {
             self.frame.size = CGSize(width: originView.frame.width-gap_x*2, height: othersize )
             //autoscall view size base on iPhone 5
             if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
+                autoScallViewSize.base_on_iPhone5(self, width_resize_only: false , height_resize_only: true )
                 othersize = self.frame.height
             }
             self.frame = CGRectMake(gap_x, originView.frame.height-gap_y-othersize, originView.frame.width-gap_x*2, othersize)
@@ -669,8 +547,8 @@ extension UIView {
             self.frame.size = CGSize(width: othersize, height: originView.frame.height-gap_y*2 )
             //autoscall view size base on iPhone 5
             if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
-                othersize = self.frame.height
+                autoScallViewSize.base_on_iPhone5(self, width_resize_only: true , height_resize_only: false )
+                othersize = self.frame.width
             }
             self.frame = CGRectMake(gap_x, gap_y, othersize, originView.frame.height-gap_y*2)
                 originView.addSubview(self)
@@ -681,7 +559,7 @@ extension UIView {
             self.frame.size = CGSize(width: othersize, height: originView.frame.height-gap_y*2 )
             //autoscall view size base on iPhone 5
             if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self)
+                autoScallViewSize.base_on_iPhone5(self, width_resize_only: true , height_resize_only: false )
                 othersize = self.frame.width
             }
             self.frame = CGRectMake(originView.frame.width-gap_x-othersize, gap_y, othersize, originView.frame.height-gap_y*2)
@@ -723,7 +601,7 @@ extension UIView {
             self.frame.size = CGSize(width: size_width_now, height: othersize )
             //autoscall view size base on iPhone 5
             if autoscall == true {
-                autoScallViewSize.base_on_iPhone5(self, width_resize_only: true)
+                autoScallViewSize.base_on_iPhone5(self, height_resize_only: true )
                 othersize = self.frame.height
             }
             
@@ -783,6 +661,16 @@ extension UIView {
         let base_view_height = self.frame.height
         let gap_count = arrayView.count - 1
         
+        //layout frist view
+        let frist_view = arrayView[0] as! UIView
+        frist_view.frame.size = CGSize(width: width, height: height)
+        //autoscall view size base on iPhone 5
+        if autoscall == true && groupin != .groupAndFill {
+            autoScallViewSize.base_on_iPhone5(frist_view)
+            width = frist_view.frame.width
+            height = frist_view.frame.height
+        }
+        
         switch groupin {
             
         //MARK: - groupInCenter
@@ -791,15 +679,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal :
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+ 
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
 
                 //get minX and MinY
@@ -830,15 +710,7 @@ extension UIView {
                 }
                 
             case .Vertical :
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = base_view_width/2 - width/2
@@ -875,15 +747,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -915,15 +779,7 @@ extension UIView {
 
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+ 
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = gap
@@ -960,15 +816,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1000,15 +848,7 @@ extension UIView {
                 
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = base_view_width-gap-width
@@ -1044,15 +884,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1083,15 +915,7 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = gap
@@ -1127,15 +951,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+ 
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1166,15 +982,7 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = base_view_width-gap-width
@@ -1210,15 +1018,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1249,15 +1049,7 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = base_view_width/2-width/2
@@ -1293,8 +1085,6 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
                 frist_view.frame.size = CGSize(width: width, height: height)
                 //autoscall view size base on iPhone 5
                 if autoscall == true {
@@ -1546,8 +1336,6 @@ extension UIView {
                 
             case .Horizontal:
                 print("Horizontal")
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
                 //autoscall view size base on Origin view
                 height = self.frame.height - gap*2
                 let total_gap_width =  (CGFloat(counts_View+1))*gap
@@ -1559,14 +1347,12 @@ extension UIView {
                 for var i=1;i<counts_View;i++ {
                     let view_now = arrayView[i] as! UIView
                     let relativeTo_view_now = arrayView[i-1] as! UIView
-                    view_now.anchorAlign(self, relativeTo: relativeTo_view_now, edgeType: anchorType.ToTheRightCentered, gap: gap/proportion, width: width, height: height )
+                    view_now.anchorAlign(self, relativeTo: relativeTo_view_now, edgeType: anchorType.ToTheRightCentered, gap: gap, width: width, height: height )
                     
                 }
                 
             case .Vertical :
                 print("Vertical")
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
                 //autoscall view size base on Origin view
                 width = self.frame.width - gap*2
                 let total_gap_height =  (CGFloat(counts_View+1))*gap
@@ -1578,16 +1364,16 @@ extension UIView {
                 for var i=1;i<counts_View;i++ {
                     let view_now = arrayView[i] as! UIView
                     let relativeTo_view_now = arrayView[i-1] as! UIView
-                    view_now.anchorAlign(self, relativeTo: relativeTo_view_now, edgeType: anchorType.UnderCentered, gap: gap/proportion, width: width, height: height )
+                    view_now.anchorAlign(self, relativeTo: relativeTo_view_now, edgeType: anchorType.UnderCentered, gap: gap, width: width, height: height )
                     
                 }
                 
             }
             
             
-        default:
-            print("error groupInType not exist!")
-            return
+//        default:
+//            print("error groupInType not exist!")
+//            return
 //       END Switch
         }
         

@@ -63,7 +63,6 @@ class anchorAlignBetween: UIViewController {
         BottomRight.anchorInCorner(contenter, edgeType: anchorType.BottomRight, gap_x: 20, gap_y: 20, width: 100, height: 100)
         
         //Between TopLeft and TopRight and align ToTheRightMatchingTop
-
         AlignBetweenHorizontal.backgroundColor = UIColor.lightGrayColor()
         AlignBetweenHorizontal.anchorAlignBetween(
             contenter,
