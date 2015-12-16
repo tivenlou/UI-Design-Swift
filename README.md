@@ -20,13 +20,13 @@ Menu:
 
 ![Center](Screenshots/menu.png)
 
-Center
+### Center :
+
 ```swift 
-View01.anchorInCenter(originView: UIView, width: size , height: size , autoscall: true )
+View01.anchorInCenter(originView: UIView, width: size , height: size , autoscall: Bool )
 ```
-
-
-![Center](Screenshots/center.png)
+![Center](Screenshots/Center.png)
+![Center](Screenshots/Center_2.png)
 
 
 
