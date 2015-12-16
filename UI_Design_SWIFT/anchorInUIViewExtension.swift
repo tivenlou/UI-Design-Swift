@@ -1085,13 +1085,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1122,15 +1116,7 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = gap
@@ -1166,15 +1152,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1205,15 +1183,7 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
                 var minX = base_view_width/2 - width/2
@@ -1249,15 +1219,7 @@ extension UIView {
             switch orientation {
                 
             case .Horizontal:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
+
                 total_views_width = (CGFloat(counts_View)*width) + (CGFloat(gap_count)*gap)
                 
                 //get minX and MinY
@@ -1288,15 +1250,6 @@ extension UIView {
                 }
                 
             case .Vertical:
-                //layout frist view
-                let frist_view = arrayView[0] as! UIView
-                frist_view.frame.size = CGSize(width: width, height: height)
-                //autoscall view size base on iPhone 5
-                if autoscall == true {
-                    autoScallViewSize.base_on_iPhone5(frist_view)
-                    width = frist_view.frame.width
-                    height = frist_view.frame.height
-                }
                 
                 total_views_height = (CGFloat(counts_View)*height) + (CGFloat(gap_count)*gap)
                 //get minX and MinY
@@ -1314,7 +1267,6 @@ extension UIView {
                      minX = base_view_width - gap - width
                      minY = base_view_height/2 - height/2
                 }
-//                frist_view.frame.offsetInPlace(dx: minX, dy: minY)
                 frist_view.frame = CGRectMake(minX, minY, width, height)
                 
                     self.addSubview(frist_view)
