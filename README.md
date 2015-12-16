@@ -16,11 +16,17 @@ SWIFT
 
 Example：
 
+Menu:
+
+![Center](Screenshots/menu.png)
+
 Center
 ```swift 
 View01.anchorInCenter(originView: UIView, width: size , height: size , autoscall: true )
 ```
 
+
+![Center](Screenshots/center.png)
 
 
 
