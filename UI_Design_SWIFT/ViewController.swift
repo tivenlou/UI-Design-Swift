@@ -91,11 +91,8 @@ class ViewController: UIViewController {
         lab11.addTarget(self, action: "anchorGroupAndFill_action", forControlEvents: UIControlEvents.TouchUpInside)
         
         let array_views = [lab01,lab02,lab03,lab04,lab05,lab06,lab06_1,lab07,lab08,lab09,lab10,lab11] as NSArray
-        contenter.anchorGrouping(array_views,
-            groupin: groupInType.groupAgainstEdge_Top,
-            orientation: orientationType.Vertical,
-            gap: 10 , width: 300 , height: 20,
-            autoscall: true , sizeToFit: true )
+        contenter.anchorGrouping(array_views, groupin: groupInType.groupAndFill, orientation: orientationType.Vertical, gap: 10, width: 300, height: 30 )
+        
         
     }
     
