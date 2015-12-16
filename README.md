@@ -339,4 +339,5 @@ baseB.anchorGrouping( arrayViews_B , groupin: groupInType.groupAndFill, orientat
 ![Center](Screenshots/anchorGroupAndFill_2.png)
 
 ### License
-MIT
+
+The MIT License (MIT)
