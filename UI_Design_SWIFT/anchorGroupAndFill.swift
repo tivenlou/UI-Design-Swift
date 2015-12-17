@@ -44,7 +44,7 @@ class anchorGroupAndFill: UIViewController {
         baseA.backgroundColor = UIColor.lightGrayColor()
         baseB.backgroundColor = UIColor.lightGrayColor()
         let view_array = [baseA,baseB]
-        contenter.anchorGrouping(view_array, groupin: groupInType.groupInCenter, orientation: orientationType.Vertical, gap: 30, width: 300, height: 200 ,autoscall: true)
+        contenter.anchorGrouping(view_array, groupin: groupInType.groupAndFill, orientation: orientationType.Vertical, gap: 20, width: 0, height: 0 ,autoscall: true)
         
         view01.alpha = 0.3
         view01.backgroundColor = UIColor.orangeColor()
