@@ -34,12 +34,10 @@ class anchorInCenter: UIViewController {
             
         
         baseView.backgroundColor = UIColor.orangeColor()
-        baseView.anchorInCenter(contenter, width: 150, height: 150 , autoscall: false)
+        baseView.anchorInCenter(contenter, width: 150, height: 150 )
         view01.backgroundColor = UIColor.redColor()
-        view01.anchorInCenterFill(baseView, gap: 5)
+        view01.anchorInCenterFill(baseView, gap: 20)
         
-        view02.backgroundColor = UIColor.whiteColor()
-        view02.anchorInCenter(baseView, width: baseView.frame.width-20, height: 30 , autoscall: false)
         
     }
     

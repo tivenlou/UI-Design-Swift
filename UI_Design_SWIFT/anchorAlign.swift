@@ -43,55 +43,55 @@ class anchorAlign: UIViewController {
             
         
         baseView.backgroundColor = UIColor.orangeColor()
-        baseView.anchorInCenter(contenter, width: 170, height: 170 , autoscall: false)
+        baseView.anchorInCenter(contenter, width: 170, height: 170 )
         
         //AboveMatchingLeft
         AboveMatchingLeft.backgroundColor = UIColor.blueColor()
-        AboveMatchingLeft.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveMatchingLeft, gap: 10, width: 50, height: 50, autoscall: false)
+        AboveMatchingLeft.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveMatchingLeft, gap: 10, width: 50, height: 50)
         
         //AboveCentered
         AboveCentered.backgroundColor = UIColor.greenColor()
-        AboveCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveCentered, gap: 10, width: 50, height: 50, autoscall: false)
+        AboveCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveCentered, gap: 10, width: 50, height: 50)
         
         //AboveMatchingRight
         AboveMatchingRight.backgroundColor = UIColor.redColor()
-        AboveMatchingRight.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveMatchingRight, gap: 10, width: 50, height: 50, autoscall: false)
+        AboveMatchingRight.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.AboveMatchingRight, gap: 10, width: 50, height: 50)
         
         //ToTheRightMatchingTop
         ToTheRightMatchingTop.backgroundColor = UIColor.blueColor()
-        ToTheRightMatchingTop.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightMatchingTop, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheRightMatchingTop.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightMatchingTop, gap: 10, width: 50, height: 50)
         
         //ToTheRightCentered
         ToTheRightCentered.backgroundColor = UIColor.greenColor()
-        ToTheRightCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightCentered, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheRightCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightCentered, gap: 10, width: 50, height: 50)
         
         //ToTheRightMatchingBottom
         ToTheRightMatchingBottom.backgroundColor = UIColor.redColor()
-        ToTheRightMatchingBottom.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightMatchingBottom, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheRightMatchingBottom.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheRightMatchingBottom, gap: 10, width: 50, height: 50)
         
         //UnderMatchingRight
         UnderMatchingRight.backgroundColor = UIColor.redColor()
-        UnderMatchingRight.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderMatchingRight, gap: 10, width: 50, height: 50, autoscall: false)
+        UnderMatchingRight.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderMatchingRight, gap: 10, width: 50, height: 50)
         
         //UnderCentered
         UnderCentered.backgroundColor = UIColor.greenColor()
-        UnderCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderCentered, gap: 10, width: 50, height: 50, autoscall: false)
+        UnderCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderCentered, gap: 10, width: 50, height: 50)
         
         //UnderMatchingLeft
         UnderMatchingLeft.backgroundColor = UIColor.blueColor()
-        UnderMatchingLeft.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderMatchingLeft, gap: 10, width: 50, height: 50, autoscall: false)
+        UnderMatchingLeft.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.UnderMatchingLeft, gap: 10, width: 50, height: 50)
         
         //ToTheLeftMatchingBottom
         ToTheLeftMatchingBottom.backgroundColor = UIColor.redColor()
-        ToTheLeftMatchingBottom.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftMatchingBottom, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheLeftMatchingBottom.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftMatchingBottom, gap: 10, width: 50, height: 50)
         
         //ToTheLeftCentered
         ToTheLeftCentered.backgroundColor = UIColor.greenColor()
-        ToTheLeftCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftCentered, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheLeftCentered.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftCentered, gap: 10, width: 50, height: 50)
         
         //ToTheLeftMatchingTop
         ToTheLeftMatchingTop.backgroundColor = UIColor.blueColor()
-        ToTheLeftMatchingTop.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftMatchingTop, gap: 10, width: 50, height: 50, autoscall: false)
+        ToTheLeftMatchingTop.anchorAlign(contenter, relativeTo: baseView, edgeType: anchorType.ToTheLeftMatchingTop, gap: 10, width: 50, height: 50)
         
         
     }
