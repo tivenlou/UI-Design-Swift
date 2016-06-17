@@ -17,7 +17,7 @@ Example：
 
 Menu:
 
-![Center](Screenshots/menu.png)
+![Center](Screenshots/menuNew0617.png)
 
 ### anchorInCenter :
 
