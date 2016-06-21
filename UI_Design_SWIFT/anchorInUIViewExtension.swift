@@ -30,6 +30,7 @@
 //Status API Training Shop Blog About
 //© 2016 GitHub, Inc. Terms Privacy Security Contact Help
 
+
 import UIKit
 
 enum anchorType: Int {
@@ -268,30 +269,30 @@ extension UIView {
             
             self.ConstraintSetWidth(originView, width: width)
             self.ConstraintSetHeight(originView, height: height)
-            self.ConstraintTop(originView, gap: gap_x)
-            self.ConstraintLeft(originView, gap: gap_y)
+            self.ConstraintTop(originView, gap: gap_y )
+            self.ConstraintLeft(originView, gap: gap_x)
             
         case .TopRight :
             
             self.ConstraintSetWidth(originView, width: width)
             self.ConstraintSetHeight(originView, height: height)
-            self.ConstraintTop(originView, gap: gap_x)
-            self.ConstraintRight(originView, gap: gap_y * -1)
+            self.ConstraintTop(originView, gap: gap_y )
+            self.ConstraintRight(originView, gap:  gap_x * -1)
             
         case .BottomLeft :
             
             self.ConstraintSetWidth(originView, width: width)
             self.ConstraintSetHeight(originView, height: height)
-            self.ConstraintBottom(originView, gap: gap_x * -1)
-            self.ConstraintLeft(originView, gap: gap_y)
+            self.ConstraintBottom(originView, gap: gap_y * -1)
+            self.ConstraintLeft(originView, gap: gap_x )
             
             
         case .BottomRight :
             
             self.ConstraintSetWidth(originView, width: width)
             self.ConstraintSetHeight(originView, height: height)
-            self.ConstraintBottom(originView, gap: gap_x * -1)
-            self.ConstraintRight(originView, gap: gap_y * -1)
+            self.ConstraintBottom(originView, gap: gap_y * -1)
+            self.ConstraintRight(originView, gap: gap_x * -1)
             
         default :
             ////print("error anchorType not exist!")
